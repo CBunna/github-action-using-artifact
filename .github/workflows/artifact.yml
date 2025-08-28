@@ -45,6 +45,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: linux
+        path: ./linux/
 
     - name: Test ${{ env.FILE_NAME }}
       run: source ./test.sh
@@ -62,6 +63,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: windows
+        path: ./windows/
         
     - name: Test ${{ env.FILE_NAME }}
       run: windows/${{ env.FILE_NAME }}.exe
